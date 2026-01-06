@@ -64,7 +64,14 @@ The following policy is required.
 
 ## Changelog
 
+#### 1.1.0
+
+- Improved script to pass shellcheck
+  - Replaced `$UID` with `$(id -u)` for POSIX sh compatibility
+  - Replaced legacy backticks with `$(...)` notation
+  - Added double quotes to prevent globbing and word splitting
+  - Removed unnecessary `$` in arithmetic expressions
+
 #### 1.0.0
 
 - initial release
-
